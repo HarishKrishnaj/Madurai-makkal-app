@@ -1,0 +1,30 @@
+{
+  "name": "madurai-makkal-connect-mobile",
+  "version": "1.0.0",
+  "private": true,
+  "main": "expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@expo/vector-icons": "^15.0.3",
+    "@react-native-async-storage/async-storage": "2.2.0",
+    "@supabase/supabase-js": "^2.98.0",
+    "expo": "^54.0.0",
+    "expo-asset": "~12.0.12",
+    "expo-image-picker": "~17.0.10",
+    "expo-location": "~19.0.8",
+    "react": "19.1.0",
+    "react-native": "0.81.5",
+    "react-native-url-polyfill": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "~19.1.10",
+    "babel-preset-expo": "~54.0.10",
+    "typescript": "~5.9.2"
+  }
+}

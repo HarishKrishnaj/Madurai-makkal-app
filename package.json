@@ -1,0 +1,11 @@
+{
+  "name": "madurai-makkal-connect",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev:mobile": "npm --prefix civic-mobile run start",
+    "android:mobile": "npm --prefix civic-mobile run android",
+    "ios:mobile": "npm --prefix civic-mobile run ios"
+  },
+  "devDependencies": {}
+}
