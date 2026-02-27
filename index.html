@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Madurai Makkal App | Build for Clean Madurai Hackathon</title>
+  <meta name="description"
+    content="Madurai Makkal App — AI-driven civic solutions for a cleaner Madurai. Our hackathon journey, challenges, learnings, and working prototype.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <img src="assets/logo.png" alt="Madurai Makkal App" class="logo-img">
+        <span class="logo-text">Madurai<span class="accent">Makkal</span></span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#video">Demo</a></li>
+        <li><a href="#ppt">PPT</a></li>
+        <li><a href="#problems">Problems</a></li>
+        <li><a href="#challenges">Challenges</a></li>
+        <li><a href="#learnings">Learnings</a></li>
+        <li><a href="#tech">Tech Stack</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-content reveal">
+      <div class="hero-badge">
+        <img src="assets/logo.png" alt="Logo" class="badge-img"> 36-Hour PromptWar Hackathon
+      </div>
+      <h1 class="hero-title">
+        Madurai<br>
+        <span class="gradient-text">Makkal App</span>
+      </h1>
+      <p class="hero-subtitle">AI-driven civic solutions for urban cleanliness, waste management & public awareness in
+        Madurai</p>
+      <div class="hero-actions">
+        <a href="#video" class="btn btn-primary">
+          <span class="btn-icon">▶</span> Watch Demo
+        </a>
+        <a href="#about" class="btn btn-secondary">Explore Project</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-value">36</span>
+          <span class="hero-stat-label">Hours</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">AI</span>
+          <span class="hero-stat-label">Powered</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-value">5</span>
+          <span class="hero-stat-label">Members</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">About the Hackathon</span>
+        <h2 class="section-title">Build with AI – <span class="gradient-text">Clean Madurai</span></h2>
+        <p class="section-desc">A 36-hour PromptWar Hackathon focused on developing AI-driven solutions for urban
+          cleanliness and civic efficiency in Madurai.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal" data-delay="0">
+          <div class="about-card-icon"><img src="assets/target.png" alt="Theme"></div>
+          <h3>Theme</h3>
+          <p>Clean Madurai — addressing waste management, public awareness, and civic efficiency through innovative AI
+            solutions.</p>
+        </div>
+        <div class="about-card reveal" data-delay="1">
+          <div class="about-card-icon"><img src="assets/timer.png" alt="Duration"></div>
+          <h3>Duration</h3>
+          <p>36 intense hours of ideation, prototyping, and building — from Feb 27 to Feb 28, 2026.</p>
+        </div>
+        <div class="about-card reveal" data-delay="2">
+          <div class="about-card-icon"><img src="assets/ai_robot.png" alt="AI Focus"></div>
+          <h3>AI Focus</h3>
+          <p>Smart segregation, predictive analytics, AI-powered reporting, and data dashboards for city authorities.
+          </p>
+        </div>
+        <div class="about-card reveal" data-delay="3">
+          <div class="about-card-icon"><img src="assets/delivery_box.png" alt="Deliverables"></div>
+          <h3>Deliverables</h3>
+          <p>Working prototype, clear problem statement, technical architecture, AI integration clarity, and impact
+            model.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Presentation</span>
+        <h2 class="section-title">Project <span class="gradient-text">Demo</span></h2>
+        <p class="section-desc">Watch our full presentation showcasing the prototype, architecture, and live
+          demonstration.</p>
+      </div>
+      <div class="video-wrapper reveal">
+        <div class="video-glow"></div>
+        <div class="video-container">
+          <video id="presentationVideo" controls poster="">
+            <source src="presentation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <div class="video-overlay" id="videoOverlay">
+            <button class="video-play-btn" id="videoPlayBtn" aria-label="Play video">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </button>
+            <p class="video-overlay-text">Play Presentation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PPT Section -->
+  <section id="ppt" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Slide Deck</span>
+        <h2 class="section-title">Project <span class="gradient-text">Presentation</span></h2>
+        <p class="section-desc">Browse through our project presentation slides showcasing the complete solution
+          architecture and approach.</p>
+      </div>
+      <div class="ppt-wrapper reveal">
+        <div class="ppt-glow"></div>
+        <div class="ppt-container">
+          <!-- Embed PPT via iframe — supports Google Slides, OneDrive, or local PDF -->
+          <div class="ppt-embed" id="pptEmbed">
+            <iframe id="pptFrame" src="" frameborder="0" allowfullscreen></iframe>
+            <div class="ppt-placeholder" id="pptPlaceholder">
+              <div class="ppt-placeholder-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <rect x="2" y="3" width="20" height="14" rx="2" />
+                  <path d="M8 21h8" />
+                  <path d="M12 17v4" />
+                  <path d="M7 8l3 3-3 3" />
+                  <line x1="13" y1="14" x2="17" y2="14" />
+                </svg>
+              </div>
+              <h3>Upload Your PPT</h3>
+              <p>Place your <code>presentation.pdf</code> in the project folder<br>or paste a Google Slides / OneDrive
+                embed link below</p>
+              <div class="ppt-url-input">
+                <input type="text" id="pptUrl" placeholder="Paste Google Slides embed URL here...">
+                <button id="pptLoadBtn" class="btn btn-primary btn-sm">Load</button>
+              </div>
+              <p class="ppt-hint">Or drop a PDF file named <strong>presentation.pdf</strong> in the project folder and
+                refresh</p>
+            </div>
+          </div>
+          <!-- Local PDF fallback -->
+          <object id="pptPdf" data="presentation.pdf" type="application/pdf" class="ppt-pdf-object">
+          </object>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problems Section -->
+  <section id="problems" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Problem Statement</span>
+        <h2 class="section-title">The <span class="gradient-text">Problems</span> We Address</h2>
+        <p class="section-desc">Real civic and environmental challenges in Madurai that our AI-driven solution tackles
+          head-on.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal" data-delay="0">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><img src="assets/waste_bin.png" alt="Waste"></div>
+            <h3>Unorganized Waste Collection</h3>
+            <p>Lack of real-time tracking and route optimization for waste collection vehicles leads to missed pickups
+              and overflowing bins across neighborhoods.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-delay="1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><img src="assets/complaint.png" alt="Complaints"></div>
+            <h3>Inefficient Complaint Systems</h3>
+            <p>Existing grievance portals are cumbersome, slow, and lack AI-powered categorization — making it hard for
+              citizens to report cleanliness issues effectively.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-delay="2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><img src="assets/recycle.png" alt="Recycling"></div>
+            <h3>Poor Waste Segregation</h3>
+            <p>Most households and establishments lack awareness and tools for proper segregation of wet, dry, and
+              hazardous waste.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal" data-delay="3">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <div class="timeline-icon"><img src="assets/data_chart.png" alt="Data"></div>
+            <h3>No Data-Driven Decision Making</h3>
+            <p>Municipal authorities lack real-time dashboards and predictive analytics to allocate resources
+              efficiently and identify cleanliness hotspots.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Challenges Section -->
+  <section id="challenges" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Journey</span>
+        <h2 class="section-title">Challenges <span class="gradient-text">We Faced</span></h2>
+        <p class="section-desc">Every hackathon is a rollercoaster — here are the hurdles we overcame during 36 intense
+          hours.</p>
+      </div>
+      <div class="challenges-grid">
+        <div class="challenge-card reveal" data-delay="0">
+          <div class="challenge-number">01</div>
+          <div class="challenge-body">
+            <h3>Time Pressure</h3>
+            <p>Balancing feature scope with quality in just 36 hours forced us to ruthlessly prioritize and make fast
+              architectural decisions.</p>
+          </div>
+          <div class="challenge-tag"><img src="assets/timer.png" alt="" class="tag-icon"> Time Management</div>
+        </div>
+        <div class="challenge-card reveal" data-delay="1">
+          <div class="challenge-number">02</div>
+          <div class="challenge-body">
+            <h3>AI Model Integration</h3>
+            <p>Integrating multiple AI models for image classification, NLP complaint processing, and predictive
+              analytics within the tight timeline was demanding.</p>
+          </div>
+          <div class="challenge-tag"><img src="assets/ai_robot.png" alt="" class="tag-icon"> Technical</div>
+        </div>
+        <div class="challenge-card reveal" data-delay="2">
+          <div class="challenge-number">03</div>
+          <div class="challenge-body">
+            <h3>Real-world Data Scarcity</h3>
+            <p>Finding reliable, clean datasets for Madurai's waste patterns and civic complaints required creative data
+              sourcing and synthetic augmentation.</p>
+          </div>
+          <div class="challenge-tag"><img src="assets/data_chart.png" alt="" class="tag-icon"> Data</div>
+        </div>
+        <div class="challenge-card reveal" data-delay="3">
+          <div class="challenge-number">04</div>
+          <div class="challenge-body">
+            <h3>UI/UX Under Pressure</h3>
+            <p>Designing an intuitive interface that both citizens and authorities could use — while sleep-deprived —
+              pushed our creativity to the limit.</p>
+          </div>
+          <div class="challenge-tag"><img src="assets/compass.png" alt="" class="tag-icon"> Design</div>
+        </div>
+        <div class="challenge-card reveal" data-delay="4">
+          <div class="challenge-number">05</div>
+          <div class="challenge-body">
+            <h3>Team Coordination</h3>
+            <p>Splitting tasks across frontend, backend, AI, and presentation while keeping everything in sync required
+              constant communication.</p>
+          </div>
+          <div class="challenge-tag"><img src="assets/handshake.png" alt="" class="tag-icon"> Teamwork</div>
+        </div>
+        <div class="challenge-card reveal" data-delay="5">
+          <div class="challenge-number">06</div>
+          <div class="challenge-body">
+            <h3>Deployment & Demo</h3>
+            <p>Getting a production-ready demo with live AI features working flawlessly for the judges was the final
+              sprint challenge.</p>
+          </div>
+          <div class="challenge-tag"><img src="assets/lightning.png" alt="" class="tag-icon"> Deployment</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learnings Section -->
+  <section id="learnings" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Takeaways</span>
+        <h2 class="section-title">What We <span class="gradient-text">Learned</span></h2>
+        <p class="section-desc">Key insights and skills we gained throughout this incredible hackathon experience.</p>
+      </div>
+      <div class="learnings-grid">
+        <div class="learning-card reveal" data-delay="0">
+          <div class="learning-icon"><img src="assets/brain.png" alt="Brain"></div>
+          <h3>AI Prompt Engineering</h3>
+          <p>Mastered the art of crafting effective prompts for LLMs to process civic complaints, generate reports, and
+            classify waste images accurately.</p>
+        </div>
+        <div class="learning-card reveal" data-delay="1">
+          <div class="learning-icon"><img src="assets/lightning.png" alt="Speed"></div>
+          <h3>Rapid Prototyping</h3>
+          <p>Learned to go from idea to working MVP in hours — choosing the right tools, making quick decisions, and
+            iterating fast.</p>
+        </div>
+        <div class="learning-card reveal" data-delay="2">
+          <div class="learning-icon"><img src="assets/architecture.png" alt="Architecture"></div>
+          <h3>System Architecture</h3>
+          <p>Designing a scalable architecture under time pressure taught us to think modularly and plan for future
+            extensibility.</p>
+        </div>
+        <div class="learning-card reveal" data-delay="3">
+          <div class="learning-icon"><img src="assets/handshake.png" alt="Collaboration"></div>
+          <h3>Collaboration at Speed</h3>
+          <p>Working as a team under intense pressure strengthened our communication, git workflow, and conflict
+            resolution skills.</p>
+        </div>
+        <div class="learning-card reveal" data-delay="4">
+          <div class="learning-icon"><img src="assets/globe.png" alt="Impact"></div>
+          <h3>Real-World Impact</h3>
+          <p>Understood how technology can directly improve civic life — making us more conscious about building
+            solutions that matter.</p>
+        </div>
+        <div class="learning-card reveal" data-delay="5">
+          <div class="learning-icon"><img src="assets/compass.png" alt="Design"></div>
+          <h3>Design Thinking</h3>
+          <p>Empathizing with end users — citizens and municipal workers — shaped every feature decision and UI element
+            we built.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack Section -->
+  <section id="tech" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Under the Hood</span>
+        <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
+        <p class="section-desc">The technologies, tools, and AI platforms powering our Madurai Makkal App.</p>
+      </div>
+      <div class="tech-grid-3d">
+        <!-- Flutter -->
+        <div class="tech-card-3d reveal" data-delay="0">
+          <div class="tech-card-inner">
+            <div class="tech-card-front">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"
+                class="tech-logo">
+              <h3>Flutter</h3>
+            </div>
+            <div class="tech-card-back">
+              <p>Cross-platform mobile app for citizens to report issues, track waste, and receive updates</p>
+            </div>
+          </div>
+        </div>
+        <!-- Dart -->
+        <div class="tech-card-3d reveal" data-delay="1">
+          <div class="tech-card-inner">
+            <div class="tech-card-front">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg" alt="Dart"
+                class="tech-logo">
+              <h3>Dart</h3>
+            </div>
+            <div class="tech-card-back">
+              <p>Primary language powering the Flutter app with fast, reactive UI development</p>
+            </div>
+          </div>
+        </div>
+        <!-- Python -->
+        <div class="tech-card-3d reveal" data-delay="2">
+          <div class="tech-card-inner">
+            <div class="tech-card-front">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+                class="tech-logo">
+              <h3>Python</h3>
+            </div>
+            <div class="tech-card-back">
+              <p>Backend development, ML model training, and AI inference pipeline</p>
+            </div>
+          </div>
+        </div>
+        <!-- Firebase -->
+        <div class="tech-card-3d reveal" data-delay="3">
+          <div class="tech-card-inner">
+            <div class="tech-card-front">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"
+                class="tech-logo">
+              <h3>Firebase</h3>
+            </div>
+            <div class="tech-card-back">
+              <p>Real-time database, authentication, cloud functions, and push notifications</p>
+            </div>
+          </div>
+        </div>
+        <!-- Google Cloud -->
+        <div class="tech-card-3d reveal" data-delay="4">
+          <div class="tech-card-inner">
+            <div class="tech-card-front">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg"
+                alt="Google Cloud" class="tech-logo">
+              <h3>Google Cloud</h3>
+            </div>
+            <div class="tech-card-back">
+              <p>Cloud hosting, AI/ML APIs, Vision API for waste image classification</p>
+            </div>
+          </div>
+        </div>
+        <!-- TensorFlow -->
+        <div class="tech-card-3d reveal" data-delay="5">
+          <div class="tech-card-inner">
+            <div class="tech-card-front">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg"
+                alt="TensorFlow" class="tech-logo">
+              <h3>TensorFlow</h3>
+            </div>
+            <div class="tech-card-back">
+              <p>ML models for waste classification, predictive cleanliness analytics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI IDE & Tools -->
+      <div class="section-sub-header reveal">
+        <h3 class="sub-title">AI Tools & <span class="gradient-text">IDEs</span></h3>
+        <p class="sub-desc">The AI-powered development tools that supercharged our productivity</p>
+      </div>
+      <div class="ai-tools-grid">
+        <div class="ai-tool-card reveal" data-delay="0">
+          <div class="ai-tool-icon-wrap">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Google_Gemini_logo.svg/2560px-Google_Gemini_logo.svg.png"
+              alt="Antigravity" class="ai-tool-logo">
+          </div>
+          <h4>Antigravity</h4>
+          <p>AI coding assistant by Google DeepMind</p>
+        </div>
+        <div class="ai-tool-card reveal" data-delay="1">
+          <div class="ai-tool-icon-wrap">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Anthropic_logo.svg/2560px-Anthropic_logo.svg.png"
+              alt="Claude" class="ai-tool-logo claude-logo">
+          </div>
+          <h4>Claude</h4>
+          <p>Advanced AI reasoning by Anthropic</p>
+        </div>
+        <div class="ai-tool-card reveal" data-delay="2">
+          <div class="ai-tool-icon-wrap">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/OpenAI_Logo.svg/2560px-OpenAI_Logo.svg.png"
+              alt="Codex" class="ai-tool-logo codex-logo">
+          </div>
+          <h4>Codex</h4>
+          <p>Code generation engine by OpenAI</p>
+        </div>
+        <div class="ai-tool-card reveal" data-delay="3">
+          <div class="ai-tool-icon-wrap">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code"
+              class="ai-tool-logo">
+          </div>
+          <h4>VS Code</h4>
+          <p>Primary IDE with AI extensions</p>
+        </div>
+      </div>
+
+      <!-- Architecture Diagram -->
+      <div class="architecture-diagram reveal">
+        <h3 class="arch-title">System Architecture</h3>
+        <div class="arch-flow">
+          <div class="arch-node">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter"
+              class="arch-node-img">
+            <span>Flutter App</span>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" alt="Firebase"
+              class="arch-node-img">
+            <span>Firebase</span>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python"
+              class="arch-node-img">
+            <span>AI Engine</span>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg" alt="GCP"
+              class="arch-node-img">
+            <span>Cloud</span>
+          </div>
+          <div class="arch-arrow">→</div>
+          <div class="arch-node">
+            <img src="assets/data_chart.png" alt="Dashboard" class="arch-node-img">
+            <span>Dashboard</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section id="impact" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Making a Difference</span>
+        <h2 class="section-title">Impact & <span class="gradient-text">Scalability</span></h2>
+        <p class="section-desc">The potential reach and measurable outcomes of our solution for Madurai and beyond.</p>
+      </div>
+      <div class="impact-stats reveal">
+        <div class="impact-stat">
+          <div class="impact-stat-value" data-target="1500000">0</div>
+          <div class="impact-stat-label">Citizens Impacted</div>
+          <div class="impact-stat-sub">Madurai Population</div>
+        </div>
+        <div class="impact-stat">
+          <div class="impact-stat-value" data-target="40">0</div>
+          <div class="impact-stat-label">% Faster Response</div>
+          <div class="impact-stat-sub">Complaint Resolution</div>
+        </div>
+        <div class="impact-stat">
+          <div class="impact-stat-value" data-target="95">0</div>
+          <div class="impact-stat-label">% AI Accuracy</div>
+          <div class="impact-stat-sub">Waste Classification</div>
+        </div>
+        <div class="impact-stat">
+          <div class="impact-stat-value" data-target="10">0</div>
+          <div class="impact-stat-label">Scalable Cities</div>
+          <div class="impact-stat-sub">Tier 2 & 3 India</div>
+        </div>
+      </div>
+      <div class="impact-features reveal">
+        <div class="impact-feature">
+          <div class="impact-feature-icon"><img src="assets/architecture.png" alt="Scalable"></div>
+          <h3>Scalable Architecture</h3>
+          <p>Microservices-based design allows easy deployment to any city with minimal customization.</p>
+        </div>
+        <div class="impact-feature">
+          <div class="impact-feature-icon"><img src="assets/lightning.png" alt="Cost"></div>
+          <h3>Cost Effective</h3>
+          <p>Reduces operational costs by optimizing waste collection routes and resource allocation.</p>
+        </div>
+        <div class="impact-feature">
+          <div class="impact-feature-icon"><img src="assets/brain.png" alt="Learning"></div>
+          <h3>Continuous Learning</h3>
+          <p>AI models improve over time with more data, increasing accuracy and prediction quality.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">The Builders</span>
+        <h2 class="section-title">Our <span class="gradient-text">Team</span></h2>
+        <p class="section-desc">The passionate minds behind Madurai Makkal App, united by a shared vision for a cleaner
+          Madurai.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card reveal" data-delay="0">
+          <div class="team-avatar">
+            <div class="team-avatar-placeholder">HK</div>
+          </div>
+          <h3>Harish Krishna J</h3>
+          <p class="team-role">Full Stack Developer</p>
+          <p class="team-desc">Led the frontend development and AI model integration for the prototype.</p>
+        </div>
+        <div class="team-card reveal" data-delay="1">
+          <div class="team-avatar">
+            <div class="team-avatar-placeholder">PK</div>
+          </div>
+          <h3>Prawin Kumar N</h3>
+          <p class="team-role">AI/ML Engineer</p>
+          <p class="team-desc">Built the waste classification model and NLP pipeline for complaint processing.</p>
+        </div>
+        <div class="team-card reveal" data-delay="2">
+          <div class="team-avatar">
+            <div class="team-avatar-placeholder">HN</div>
+          </div>
+          <h3>Harivarshan N</h3>
+          <p class="team-role">Backend Developer</p>
+          <p class="team-desc">Designed the API architecture and database schema for real-time data flow.</p>
+        </div>
+        <div class="team-card reveal" data-delay="3">
+          <div class="team-avatar">
+            <div class="team-avatar-placeholder">JK</div>
+          </div>
+          <h3>Jeeva K M</h3>
+          <p class="team-role">UI/UX Designer</p>
+          <p class="team-desc">Crafted the user experience for both citizen and authority-facing dashboards.</p>
+        </div>
+        <div class="team-card reveal" data-delay="4">
+          <div class="team-avatar">
+            <div class="team-avatar-placeholder">VG</div>
+          </div>
+          <h3>Vigneshwaran G</h3>
+          <p class="team-role">DevOps & Testing</p>
+          <p class="team-desc">Handled deployment, CI/CD pipeline setup, and end-to-end quality assurance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="Logo" class="footer-logo-img">
+          <span class="logo-text">Madurai<span class="accent">Makkal</span></span>
+          <p class="footer-tagline">AI for a cleaner tomorrow</p>
+        </div>
+        <div class="footer-badge">
+          <div class="hackathon-badge">
+            <img src="assets/trophy.png" alt="Trophy" class="badge-footer-img">
+            <div>
+              <strong>Build with AI</strong>
+              <span>PromptWar Hackathon 2026</span>
+            </div>
+          </div>
+        </div>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#video">Demo</a>
+          <a href="#problems">Problems</a>
+          <a href="#team">Team</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Madurai Makkal App. Built with 💚 during Build with AI Hackathon.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
