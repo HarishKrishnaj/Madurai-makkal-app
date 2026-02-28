@@ -288,7 +288,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ===== TILT EFFECT ON CARDS =====
 (function initTilt() {
-  const cards = document.querySelectorAll('.about-card, .ai-tool-card, .team-card');
+  const cards = document.querySelectorAll('.about-card, .ai-tool-card, .team-card, .feature-card');
 
   cards.forEach(card => {
     card.addEventListener('mousemove', (e) => {
