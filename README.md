@@ -189,7 +189,7 @@ npm run android:mobile
 
 # 👨‍💻 Author
 
-**Harish Krishna Harivarshan N Jeeva K M**
+**Harish Krishna J Harivarshan N Jeeva K M**
 
 GitHub
 [https://github.com/HarishKrishnaj](https://github.com/HarishKrishnaj)
