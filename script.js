@@ -181,46 +181,28 @@
 
 // ===== PPT SECTION =====
 (function initPPT() {
-  const pptFrame = document.getElementById('pptFrame');
-  const pptPlaceholder = document.getElementById('pptPlaceholder');
-  const pptUrl = document.getElementById('pptUrl');
-  const pptLoadBtn = document.getElementById('pptLoadBtn');
   const pptPdf = document.getElementById('pptPdf');
+  const pptFallback = document.getElementById('pptFallback');
 
-  if (!pptFrame || !pptPlaceholder) return;
+  if (!pptPdf) return;
 
-  // Try loading local PDF
-  function checkPdf() {
-    const testImg = new Image();
-    // Try to detect if PDF exists by checking the object element
-    if (pptPdf && pptPdf.data) {
-      pptPdf.addEventListener('load', () => {
-        pptPdf.classList.add('active');
-        pptPlaceholder.classList.add('hidden');
-      });
+  // Check if PDF loads successfully; show fallback on mobile/unsupported browsers
+  pptPdf.addEventListener('error', () => {
+    if (pptFallback) {
+      pptPdf.style.display = 'none';
+      pptFallback.style.display = 'flex';
     }
+  });
+
+  // Some mobile browsers don't fire error but render a blank object
+  // Detect mobile and show fallback + download link
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  if (isMobile && pptFallback) {
+    pptPdf.style.display = 'none';
+    pptFallback.style.display = 'flex';
   }
-
-  // Load from URL
-  if (pptLoadBtn) {
-    pptLoadBtn.addEventListener('click', () => {
-      const url = pptUrl.value.trim();
-      if (url) {
-        pptFrame.src = url;
-        pptFrame.classList.add('active');
-        pptPlaceholder.classList.add('hidden');
-      }
-    });
-
-    pptUrl.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter') {
-        pptLoadBtn.click();
-      }
-    });
-  }
-
-  checkPdf();
 })();
+
 
 // ===== ANIMATED COUNTERS =====
 (function initCounters() {

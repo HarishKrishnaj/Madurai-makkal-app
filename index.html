@@ -390,7 +390,7 @@
         <div class="video-glow"></div>
         <div class="video-container">
           <video id="presentationVideo" controls poster="">
-            <source src="presentation.mp4" type="video/mp4">
+            <source src="Presentation%20Video%20(Team%20Fatality).mp4" type="video/mp4">
             Your browser does not support the video tag.
           </video>
           <div class="video-overlay" id="videoOverlay">
@@ -418,34 +418,39 @@
       <div class="ppt-wrapper reveal">
         <div class="ppt-glow"></div>
         <div class="ppt-container">
-          <!-- Embed PPT via iframe — supports Google Slides, OneDrive, or local PDF -->
           <div class="ppt-embed" id="pptEmbed">
-            <iframe id="pptFrame" src="" frameborder="0" allowfullscreen></iframe>
-            <div class="ppt-placeholder" id="pptPlaceholder">
+            <!-- Native PDF embed -->
+            <object id="pptPdf" data="Presentation.pdf" type="application/pdf" class="ppt-pdf-object active"
+              style="width:100%;height:600px;border-radius:12px;">
+              <!-- Fallback: iframe with Google Docs Viewer -->
+              <iframe id="pptFrame" src="https://docs.google.com/gview?embedded=true&url="
+                style="width:100%;height:600px;border:none;border-radius:12px;" allowfullscreen></iframe>
+            </object>
+            <!-- Mobile / unsupported browser fallback -->
+            <div class="ppt-fallback" id="pptFallback" style="display:none;">
               <div class="ppt-placeholder-icon">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
                   stroke-linejoin="round">
-                  <rect x="2" y="3" width="20" height="14" rx="2" />
-                  <path d="M8 21h8" />
-                  <path d="M12 17v4" />
-                  <path d="M7 8l3 3-3 3" />
-                  <line x1="13" y1="14" x2="17" y2="14" />
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
                 </svg>
               </div>
-              <h3>Upload Your PPT</h3>
-              <p>Place your <code>presentation.pdf</code> in the project folder<br>or paste a Google Slides / OneDrive
-                embed link below</p>
-              <div class="ppt-url-input">
-                <input type="text" id="pptUrl" placeholder="Paste Google Slides embed URL here...">
-                <button id="pptLoadBtn" class="btn btn-primary btn-sm">Load</button>
-              </div>
-              <p class="ppt-hint">Or drop a PDF file named <strong>presentation.pdf</strong> in the project folder and
-                refresh</p>
+              <h3>Project Presentation</h3>
+              <p>Your browser doesn't support embedded PDFs.</p>
+              <a href="Presentation.pdf" target="_blank" class="btn btn-primary" download>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Download PDF
+              </a>
             </div>
           </div>
-          <!-- Local PDF fallback -->
-          <object id="pptPdf" data="presentation.pdf" type="application/pdf" class="ppt-pdf-object">
-          </object>
         </div>
       </div>
     </div>
