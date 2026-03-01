@@ -65,7 +65,7 @@ Madurai Makkal Connect empowers citizens to actively participate in maintaining 
 
 ## 👨‍💻 Author
 
-**Harish Krishna J **
+**Harish Krishna J Harivarshan N Jeeva K M **
 
 GitHub:
 [https://github.com/HarishKrishnaj](https://github.com/HarishKrishnaj)
