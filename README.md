@@ -1,40 +1,71 @@
-# Madurai Makkal Connect
+# 📱 Madurai Makkal Connect
 
-Cross-platform civic waste management app with Supabase-ready backend integration.
+A modern cross-platform civic engagement mobile application designed to improve waste management, citizen participation, and urban cleanliness through AI, geolocation, and reward-based incentives.
 
-## Project Structure
+---
 
-- Mobile app: `civic-mobile/`
-- Supabase schema and edge function: `civic-mobile/supabase/`
+## 🌐 Live Portfolio Deployment
 
-## Run
+🔗 **Vercel Portfolio:**
+[https://hackathon-two-ebon.vercel.app](https://hackathon-two-ebon.vercel.app)
 
-```bash
-npm --prefix civic-mobile install
-npm run dev:mobile
-```
+This portfolio includes:
 
-Or platform specific:
+* Project overview
+* Architecture explanation
+* Feature walkthrough
+* Hackathon presentation materials
+* App details and demonstration
 
-```bash
-npm run android:mobile
-npm run ios:mobile
-```
+---
 
-## Feature Coverage
+## 🎥 Presentation Video
 
-The current app includes:
+Watch the full project explanation and demo:
 
-- Phone OTP auth (Supabase Auth)
-- Location + geo-verification engine
-- Smart public bin registry and full-bin reporting
-- Scan-to-earn disposal (QR + geo + AI checks)
-- AI image validation and duplicate detection
-- Green Wallet reward ledger
-- Coupon-based reward redemption
-- Smart complaint reporting (311)
-- Proof-of-cleanliness upload and verification
-- Fraud/misuse detection with risk scoring
-- Cleanliness analytics dashboard
+[https://www.youtube.com/watch?v=47gXsy_mD5o](https://www.youtube.com/watch?v=47gXsy_mD5o)
 
-See `civic-mobile/README.md` for details.
+This video covers:
+
+* Problem statement
+* Solution overview
+* App features
+* Technical architecture
+* Live demonstration
+* Impact and scalability
+
+---
+
+## 🌍 Overview
+
+Madurai Makkal Connect empowers citizens to actively participate in maintaining city cleanliness by reporting waste issues, scanning smart bins, earning rewards, and tracking civic impact.
+
+---
+
+## 🚀 Quick Links
+
+| Resource              | Link                                                                                                         |
+| --------------------- | ------------------------------------------------------------------------------------------------------------ |
+| 🌐 Portfolio          | [https://hackathon-two-ebon.vercel.app](https://hackathon-two-ebon.vercel.app)                               |
+| 🎥 Presentation Video | [https://www.youtube.com/watch?v=47gXsy_mD5o](https://www.youtube.com/watch?v=47gXsy_mD5o)                   |
+| 📦 GitHub Repository  | [https://github.com/HarishKrishnaj/Madurai-makkal-app](https://github.com/HarishKrishnaj/Madurai-makkal-app) |
+
+---
+
+## 🧱 Tech Stack
+
+* React Native
+* Supabase
+* TypeScript
+* Android & iOS
+* Geo-verification
+* AI validation system
+
+---
+
+## 👨‍💻 Author
+
+**Harish Krishna J **
+
+GitHub:
+[https://github.com/HarishKrishnaj](https://github.com/HarishKrishnaj)
